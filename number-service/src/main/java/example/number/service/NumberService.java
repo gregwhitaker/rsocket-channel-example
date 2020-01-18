@@ -39,9 +39,6 @@ public class NumberService {
 
                             @Override
                             public Flux<Payload> requestChannel(Publisher<Payload> payloads) {
-                                Flux<Payload> totalFlux = Flux.interval(Duration.ofSeconds(1))
-                                        .map(i -> DefaultPayload.create(BigInteger.valueOf(evenCnt.get()).toByteArray()));
-
                                 // Subscribe to the incoming publisher to receive data from number-client
                                 payloads.subscribe(new Subscriber<Payload>() {
                                     @Override
