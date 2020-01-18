@@ -1,0 +1,14 @@
+plugins {
+    id "java"
+    id "application"
+}
+
+mainClassName = 'example.number.service.NumberService'
+sourceCompatibility = 1.8
+
+dependencies {
+    implementation "io.rsocket:rsocket-core:${rsocketVersion}"
+    implementation "io.rsocket:rsocket-transport-netty:${rsocketVersion}"
+    implementation 'org.slf4j:slf4j-api:1.7.25'
+    implementation 'org.slf4j:slf4j-simple:1.7.25'
+}

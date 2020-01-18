@@ -1,2 +1,3 @@
 rootProject.name = 'rsocket-channel-example'
-
+include 'number-client'
+include 'number-service'
