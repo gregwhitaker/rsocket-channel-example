@@ -73,7 +73,13 @@ public class NumberService {
 
                                 // Return this flux that will emit the odd and even tallies at a fixed interval
                                 return Flux.interval(Duration.ofSeconds(1))
-                                        .map(i -> DefaultPayload.create(BigInteger.valueOf(evenCnt.get()).toByteArray()));
+                                        .map(i -> {
+                                            final long total = evenCnt.get();
+
+                                            LOG.info("Sending Total: {}", total);
+
+                                            return DefaultPayload.create(BigInteger.valueOf(total).toByteArray());
+                                        });
                             }
                         });
                     }
