@@ -21,6 +21,10 @@ import java.math.BigInteger;
 import java.time.Duration;
 import java.util.concurrent.atomic.AtomicLong;
 
+/**
+ * Service that receives a stream of integers, counts the even numbers, and streams back the total count
+ * of even numbers received at a one second interval.
+ */
 public class NumberService {
     private static final Logger LOG = LoggerFactory.getLogger(NumberService.class);
 
