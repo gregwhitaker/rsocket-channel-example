@@ -1,6 +1,10 @@
 # rsocket-channel-example
 An example of sending bi-directional messages between applications with the channel interaction model in [RSocket](http://rsocket.io).
 
+In this example the `number-client` will stream `50` integers to the `number-service`. The service will count the even integers
+it receives and stream back the total count of even numbers received at a one-second interval to the client. All communication is
+taking place over a single RSocket channel.
+
 ## Building the Example
 Run the following command to build the example:
 
