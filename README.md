@@ -9,7 +9,31 @@ Run the following command to build the example:
 ## Running the Example
 Follow the steps below to run the example:
 
-TBD
+1. Run the following command to start the `number-service`:
+
+        ./gradlew :number-service:run
+        
+    If the service has started successfully you will see the following in the terminal:
+    
+        > Task :number-service:run
+        [main] INFO example.number.service.NumberService - RSocket server started on port: 7000
+        
+2. In a new terminal, run the following command to start streaming integers with the `number-client`:
+
+        ./gradlew :number-client:run
+        
+    If successful, you will see integers being streamed out to the service and the total count of even numbers being streamed
+    back in the terminal:
+    
+        [reactor-tcp-nio-1] INFO example.number.client.NumberClient - Total Even Number Count: 26
+        [parallel-8] INFO example.number.client.NumberClient - Sending: 9
+        [parallel-1] INFO example.number.client.NumberClient - Sending: 4
+        [reactor-tcp-nio-1] INFO example.number.client.NumberClient - Total Even Number Count: 27
+        [parallel-2] INFO example.number.client.NumberClient - Sending: 3
+        [parallel-3] INFO example.number.client.NumberClient - Sending: 7
+        [parallel-3] INFO example.number.client.NumberClient - Done
+    
+    Once the client has streamed `50` integers it will complete.
 
 ## Bugs and Feedback
 For bugs, questions, and discussions please use the [Github Issues](https://github.com/gregwhitaker/rsocket-channel-example/issues).
