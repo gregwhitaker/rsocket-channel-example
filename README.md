@@ -1,4 +1,18 @@
 # rsocket-channel-example
+An example of sending bi-directional messages between applications with the channel interaction model in [RSocket](http://rsocket.io).
+
+## Building the Example
+Run the following command to build the example:
+
+    ./gradlew clean build
+    
+## Running the Example
+Follow the steps below to run the example:
+
+TBD
+
+## Bugs and Feedback
+For bugs, questions, and discussions please use the [Github Issues](https://github.com/gregwhitaker/rsocket-channel-example/issues).
 
 ## License
 MIT License

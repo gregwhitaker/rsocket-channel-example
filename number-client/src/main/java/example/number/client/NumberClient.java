@@ -7,6 +7,6 @@ public class NumberClient {
     private static final Logger LOG = LoggerFactory.getLogger(NumberClient.class);
 
     public static void main(String... args) {
-        
+
     }
 }
